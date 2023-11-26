@@ -1,5 +1,5 @@
 FROM python
-COPY ./app
+COPY . /app
 WORKDIR /app
-COPY requirements.txt . ./
+COPY requirements.txt .
 CMD ["python","app.py"]
