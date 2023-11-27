@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myfirstpod
+  labels:
+    app: flask
+spec:
+  template: 
+    metadata:
+      name: myfirstpod
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: myfirstpod
+        image: liatdavid2/devopspy
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: flask
